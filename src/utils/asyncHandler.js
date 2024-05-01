@@ -1,5 +1,3 @@
-import  Promise  from "mongoose";
-
 const asyncHandler = (requstHandler) => {
    return (req, res, next) => {
     Promise.resolve(requstHandler(req,res,next)).catch((err)=>next(err))
